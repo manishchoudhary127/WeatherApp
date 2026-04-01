@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    color: #222;
+    padding: 20px;
+}
+
+.app {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.location {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.pin {
+    font-size: 1rem;
+    margin-top: 3px;
+}
+
+.location h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.time {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 3px;
+    font-family: monospace;
+}
+
+.temp-block {
+    text-align: right;
+}
+
+.temp-block h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1;
+}
+
+.temp-block p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
+}
+
+
+.status-bar {
+    background: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+
+.status-bar p {
+    font-size: 0.9rem;
+    color: #2e7d32;
+    text-transform: capitalize;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.card {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    padding: 12px 14px;
+}
+
+.card h4 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+    font-family: Arial, sans-serif;
+    margin-bottom: 6px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #222;
+}
+
+@media (max-width: 400px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .temp-block h1 {
+        font-size: 1.8rem;
+    }
+}
