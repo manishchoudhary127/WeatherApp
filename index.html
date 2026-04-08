@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pune Weather</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart City Weather Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-<div class="app">
+<div class="container">
 
+<h1>🌦 Smart City Weather Dashboard</h1>
 
-    <div class="header">
-        <div>
-            <h2>📍 Pune, India</h2>
-            <p id="time"></p>
-        </div>
-        <div class="temp">
-            <h1 id="temp">--°</h1>
-            <p id="condition">--</p>
-        </div>
-    </div>
+<div class="search-box">
 
+<input
+type="text"
+id="cityInput"
+placeholder="Enter city name"
+/>
 
-    <div class="highlight">
-        <h3>Weather Status</h3>
-        <p id="status">Loading...</p>
-    </div>
+<button id="searchBtn">
+Search
+</button>
 
+</div>
 
-    <div class="grid" id="weatherContainer"></div>
+<div id="weatherCard" class="weather-card"></div>
+
+<div id="suggestion" class="suggestion"></div>
+
+<h2>5 Day Forecast</h2>
+
+<div id="forecast" class="forecast"></div>
 
 </div>
 
 <script src="main.js"></script>
+
 </body>
 </html>
