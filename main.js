@@ -1,6 +1,6 @@
 const API_KEY = "41bc4e4588ccaeaf27e8c4a9836d92d5";
 
-// Wait for DOM to load
+
 document.addEventListener("DOMContentLoaded", () => {
     const searchBtn = document.getElementById("searchBtn");
     const cityInput = document.getElementById("cityInput");
@@ -137,22 +137,20 @@ function clothingSuggestion(temp, condition, data){
     let advice = [];
     let emoji = "😊";
     
-    // Rain/Precipitation advice
+
     if(condition.includes("rain") || condition.includes("drizzle")) {
         advice.push("🌧 Bring an umbrella!");
         advice.push("👟 Wear waterproof shoes");
         emoji = "🌧";
     }
     
-    // Snow advice
     if(condition.includes("snow")) {
         advice.push("❄️ Wear a heavy winter coat");
         advice.push("🧤 Don't forget gloves and a scarf");
         advice.push("👢 Wear insulated boots");
         emoji = "❄️";
     }
-    
-    // Temperature-based advice
+    e
     if(temp < 0) {
         advice.push("🧥 Extreme cold - wear multiple layers!");
         advice.push("🧣 Protect your face and extremities");
@@ -180,33 +178,27 @@ function clothingSuggestion(temp, condition, data){
         emoji = "🌞";
     }
     
-    // Humidity advice
     if(data.main.humidity > 80) {
         advice.push("💦 High humidity - wear cotton for comfort");
     }
     
-    // Wind advice
     if(data.wind.speed > 10) {
         advice.push("💨 It's windy - wear a windbreaker");
     }
     
-    // Thunderstorm advice
     if(condition.includes("thunder") || condition.includes("thunderstorm")) {
         advice.push("⚡ Thunderstorm warning - stay indoors if possible!");
         emoji = "⚡";
     }
     
-    // Cloud/Overcast advice
     if(condition.includes("cloud") || condition.includes("overcast")) {
         advice.push("☁️ It's overcast - sunscreen still recommended");
     }
-    
-    // Default comfort advice
+
     if(advice.length === 0) {
         advice.push(emoji + " Weather looks comfortable!");
     }
     
-    // Display advice
     suggestion.innerHTML = `<strong>${emoji} What to Wear Today</strong><br>${advice.join("<br>")}`;
 }
 
