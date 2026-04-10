@@ -150,7 +150,7 @@ function clothingSuggestion(temp, condition, data){
         advice.push("👢 Wear insulated boots");
         emoji = "❄️";
     }
-    e
+    
     if(temp < 0) {
         advice.push("🧥 Extreme cold - wear multiple layers!");
         advice.push("🧣 Protect your face and extremities");
